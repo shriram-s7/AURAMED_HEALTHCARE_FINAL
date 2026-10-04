@@ -1,0 +1,77 @@
+# Trained model weights (not committed; see README)
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.safetensors
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Node / build output
+node_modules/
+frontend/dist/
+
+# Secrets (use the .env.example files)
+.env
+**/.env
+deploy/.env.cloud
+deploy/backups/
+deploy/.demo-build/
+
+# Local databases and runtime data
+*.db
+*.db-shm
+*.db-wal
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Local-only files
+*.lnk
+Patient ID*.txt
+fix_demo.py
+
+# Publication hygiene: local secrets, training data, generated artifacts
+.env*
+!.env.example
+!**/.env.example
+*.pem
+*.key
+*.p12
+*.sqlite
+*.sqlite3
+*.log
+*.tmp
+*.bak
+*.zip
+*.tar
+*.tar.gz
+.venv*/
+.pytest_cache/
+pytest-cache-files-*/
+workflow_uploads_*/
+.vercel/
+.vscode/
+.agents/
+.codex/
+.aws/
+coverage/
+htmlcov/
+.coverage
+playwright-report/
+test-results/
+**/datasets/
+**/dataset/
+training/data/
+training/runs/
+training/checkpoints/
+training/logs/
+demo_data/
+presentation/
+deploy/.release-build/
+
+*.download

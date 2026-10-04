@@ -1,0 +1,23 @@
+{
+  "release": "v1.0.0",
+  "models": [
+    {
+      "filename": "breast_model.pth",
+      "bytes": 94364573,
+      "sha256": "399212f6ae81c436436343ddb38ed9722a68773febb238ef3152c9b943c0b06d",
+      "url": "https://github.com/shriram-s7/AURAMED_HEALTHCARE_FINAL/releases/download/v1.0.0/breast_model.pth"
+    },
+    {
+      "filename": "cervical_model.pth",
+      "bytes": 343272481,
+      "sha256": "791e4a9ebae2e653129a9c214b5ac9de9f2844ded6ebc12722ffe4780f2fb8c0",
+      "url": "https://github.com/shriram-s7/AURAMED_HEALTHCARE_FINAL/releases/download/v1.0.0/cervical_model.pth"
+    },
+    {
+      "filename": "pcos_model.pth",
+      "bytes": 94372113,
+      "sha256": "4318ee7b35357a9011a06aeda9045b37d13b8f0d50cacea517a1a0a110417c48",
+      "url": "https://github.com/shriram-s7/AURAMED_HEALTHCARE_FINAL/releases/download/v1.0.0/pcos_model.pth"
+    }
+  ]
+}

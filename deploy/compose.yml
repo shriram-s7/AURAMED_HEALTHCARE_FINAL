@@ -1,0 +1,46 @@
+services:
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile.cloud
+    restart: unless-stopped
+    env_file: .env.cloud
+    environment:
+      DATABASE_URL: sqlite:////data/auramed.db
+      UPLOAD_DIR: uploads
+      REQUIRE_TRAINED_MODELS: "true"
+    volumes:
+      - database:/data
+      - uploads:/app/uploads
+      - ../backend/app/ml/weights:/app/app/ml/weights:ro
+    expose:
+      - "8000"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+  https:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      BACKEND_DOMAIN: ${BACKEND_DOMAIN:?Set BACKEND_DOMAIN in .env.cloud}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - certificates:/data
+      - caddy_config:/config
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+volumes:
+  database:
+  uploads:
+  certificates:
+  caddy_config:

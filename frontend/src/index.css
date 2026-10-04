@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .care-page { @apply mx-auto max-w-6xl px-5 py-7 sm:px-8 sm:py-9 space-y-6; }
+  .care-page-narrow { @apply max-w-5xl; }
+  .care-header { @apply flex flex-wrap items-start justify-between gap-4; }
+  .care-kicker { @apply mb-2 text-[11px] font-semibold uppercase tracking-[.16em] text-teal-700; }
+  .care-header h1 { @apply text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900; }
+  .care-description { @apply mt-2 max-w-2xl text-sm leading-6 text-slate-500; }
+  .care-panel { @apply rounded-2xl border border-slate-200 bg-white p-5 sm:p-6; }
+  .care-panel h2 { @apply text-base font-semibold text-slate-900; }
+  .care-primary { @apply inline-flex items-center justify-center gap-3 rounded-xl bg-teal-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-teal-800 disabled:cursor-not-allowed disabled:opacity-50; }
+  .care-secondary { @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50; }
+  .care-text-link { @apply inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700 hover:underline; }
+  .care-sticky { @apply sticky bottom-0 z-10 flex flex-wrap items-center justify-between gap-3 border-t border-slate-200 bg-white/95 p-4 backdrop-blur rounded-xl; }
+  .care-sticky > p { @apply max-w-lg text-xs leading-5 text-slate-500; }
+  .care-disclosure { @apply rounded-2xl border border-slate-200 bg-white; }
+  .care-disclosure > summary { @apply flex cursor-pointer list-none items-center justify-between gap-4 p-5 text-sm font-semibold text-slate-800; }
+  .care-disclosure > summary::-webkit-details-marker { display:none; }
+  .care-disclosure > summary p { @apply mt-1 text-xs font-normal leading-5 text-slate-500; }
+  .care-disclosure[open] > summary > svg { transform:rotate(180deg); }
+  .care-disclosure-body { @apply border-t border-slate-100 p-5; }
+  .care-notice { @apply rounded-xl border px-4 py-3 text-sm leading-6; }
+  .care-notice-info { @apply border-teal-100 bg-teal-50 text-teal-900; }
+  .care-notice-error { @apply border-rose-200 bg-rose-50 text-rose-800; }
+  .care-notice-warning { @apply border-amber-200 bg-amber-50 text-amber-900; }
+  .care-field { @apply block space-y-1.5 text-sm font-medium text-slate-700; }
+  .care-field input,.care-field select,.care-field textarea { @apply block w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-normal text-slate-900 outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-100; }
+  .care-empty { @apply px-3 py-9 text-center text-sm text-slate-500; }
+  .care-search { @apply flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-400 focus-within:border-teal-500; }
+  .care-search input { @apply w-full bg-transparent text-sm text-slate-900 outline-none; }
+  .care-patient-list { @apply mt-4 divide-y divide-slate-100; }
+  .care-patient-row { @apply flex w-full items-center gap-3 rounded-lg p-3 text-left transition hover:bg-teal-50; }
+  .care-patient-row strong,.care-patient-context strong { @apply block text-sm font-semibold text-slate-900; }
+  .care-patient-row small,.care-patient-context small { @apply mt-1 block text-xs text-slate-500; }
+  .care-avatar { @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700; }
+  .care-patient-context { @apply flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-4; }
+  .care-panel-footer { @apply mt-4 border-t border-slate-100 pt-4 text-sm text-slate-500; }
+  .care-start-progress { @apply flex gap-6 border-b border-slate-200 text-sm text-slate-400; }
+  .care-start-progress span { @apply pb-3; }
+  .care-start-progress .active { @apply border-b-2 border-teal-700 font-semibold text-teal-700; }
+  .care-exam-grid { @apply grid gap-4 sm:grid-cols-3; }
+  .care-exam-card { @apply rounded-2xl border border-slate-200 bg-white p-6 text-left transition hover:border-teal-400; }
+  .care-exam-card.selected { @apply border-teal-600 bg-teal-50/50 ring-1 ring-teal-600; }
+  .care-exam-card svg { @apply mb-6 text-teal-700; }
+  .care-exam-card h2 { @apply text-base font-semibold text-slate-900; }
+  .care-exam-card p { @apply mt-2 min-h-10 text-sm leading-5 text-slate-500; }
+  .care-exam-card span { @apply mt-6 block text-xs font-semibold text-teal-700; }
+  .care-complete { @apply flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-5 text-emerald-800; }
+  .care-complete h3 { @apply font-semibold; }
+  .care-complete div div { @apply mt-1 text-sm leading-6; }
+  .care-step { @apply flex items-center gap-2 text-xs text-slate-400; }
+  .care-step[aria-current=step] { @apply font-semibold text-teal-800; }
+}

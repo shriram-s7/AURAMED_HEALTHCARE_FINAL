@@ -1,0 +1,32 @@
+{
+  "high": [
+    {
+      "src": "/demo-cases/breast/high_mlo.png",
+      "view": "L MLO"
+    },
+    {
+      "src": "/demo-cases/breast/high_cc.png",
+      "view": "L CC"
+    }
+  ],
+  "low": [
+    {
+      "src": "/demo-cases/breast/low_mlo.png",
+      "view": "L MLO"
+    },
+    {
+      "src": "/demo-cases/breast/low_cc.png",
+      "view": "L CC"
+    }
+  ],
+  "medium": [
+    {
+      "src": "/demo-cases/breast/medium_mlo.png",
+      "view": "R MLO"
+    },
+    {
+      "src": "/demo-cases/breast/medium_cc.png",
+      "view": "R CC"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+================================================================
+                    AURAMED RUN INSTRUCTIONS
+================================================================
+
+EASIEST WAY (ONE-CLICK LAUNCHER):
+Double-click `start.bat` in this folder:
+  F:\AURAMED_HEALTHCARE_FINAL\start.bat
+This automatically:
+  1. Checks and clears ports 8000 & 5173 if busy.
+  2. Launches the AuraMed FastAPI backend with PyTorch AI vision models.
+  3. Launches the AuraMed React frontend via Vite.
+  4. Opens your browser at http://localhost:5173.
+
+----------------------------------------------------------------
+MANUAL RUN:
+
+1. BACKEND (FastAPI + PyTorch AI Models):
+   cd "F:\AURAMED_HEALTHCARE_FINAL\Auramed-master\auramed-main\backend"
+   .\.venv\Scripts\activate
+   python tests/run_sqlite_server.py
+
+   - Server: http://127.0.0.1:8000
+   - Interactive API Docs: http://127.0.0.1:8000/docs
+
+2. FRONTEND (Vite + React):
+   cd "F:\AURAMED_HEALTHCARE_FINAL\Auramed-master\auramed-main\frontend"
+   npm run dev
+
+   - URL: http://localhost:5173
+
+----------------------------------------------------------------
+DEMO LOGIN CREDENTIALS:
+- Admin:   testadmin1@auramed.com   /   Admin@123   (or admin@auramed.com / 123)
+- Doctor:  testdr1@auramed.com      /   Doctor@123  (or dr.mehta@auramed.com / 123)
+- Patient: testpatient1@auramed.com /   Patient@123 (or anita@auramed.com / 123)
+================================================================
